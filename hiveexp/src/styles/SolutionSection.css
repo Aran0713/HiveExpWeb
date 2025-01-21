@@ -1,0 +1,26 @@
+.solution-section {
+    padding: 80px 20px;
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+.solution-section h2 {
+    font-family: "PassionOne", sans-serif;
+    color: gold;
+}
+
+.solution-section p {
+    font-family: "Poppins", sans-serif;
+    margin: 20px 0;
+}
+
+.solution-section .features-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.solution-section .features-list li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,22 @@
+.avoid-failure-section {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.avoid-failure-section h2 {
+    font-family: "PassionOne", sans-serif;
+    color: gold;
+}
+
+.avoid-failure-section p {
+    font-family: "Poppins", sans-serif;
+    margin: 20px 0;
+}
+
+.avoid-failure-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
