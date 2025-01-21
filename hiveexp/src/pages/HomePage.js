@@ -8,10 +8,13 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import AvoidFailureSection from "../components/AvoidFailureSection";
 import SuccessSection from "../components/SuccessSection";
 import FooterSection from "../components/FooterSection";
+import Header from "../components/Header";
+
 
 const HomePage = () => {
     return (
         <div>
+            <Header />
             <HeroSection />
             <ProblemSection />
             <SolutionSection />
