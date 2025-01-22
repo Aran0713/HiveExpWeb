@@ -12,6 +12,12 @@ const Header = () => {
                 />
                 <h1 className="header-logo-text">HiveExp</h1>
             </div>
+
+            <div className="header-button">
+                <a href="/download" className="btn btn-download">
+                    Download the App
+                </a>
+            </div>
         </header>
     );
 };
