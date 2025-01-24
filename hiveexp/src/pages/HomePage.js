@@ -9,6 +9,7 @@ import AvoidFailureSection from "../components/AvoidFailureSection";
 import SuccessSection from "../components/SuccessSection";
 import FooterSection from "../components/FooterSection";
 import Header from "../components/Header";
+import CompanySliderSection from "../components/CompanySliderSection";
 
 
 const HomePage = () => {
@@ -16,6 +17,7 @@ const HomePage = () => {
         <div>
             <Header />
             <HeroSection />
+            <CompanySliderSection />
             <ProblemSection />
             <SolutionSection />
             <GuideSection />

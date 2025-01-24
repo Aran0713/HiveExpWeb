@@ -1,17 +1,50 @@
 .problem-section {
-    padding: 80px 20px;
+    padding: 30px 20px;
     text-align: center;
-    background-color: #1e1e1e;
-    color: white;
-}
-
-.problem-section img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin: 20px 0;
+    background-color: white;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
 }
 
 .problem-section .empathy-text {
     font-style: italic;
-    color: #ccc;
+    color: black;
+}
+
+/* 
+  The carousel container hides overflowing images 
+  so only one "frame" is visible at a time.
+  If you want multiple images shown at once, 
+  increase the width.
+*/
+.carousel-container {
+    width: 2000px;
+    /* Must match the image width you want to show */
+    margin: 0 auto;
+    overflow: hidden;
+    /* border: 2px solid #fff; */
+    /* optional */
+    border-radius: 10px;
+    /* optional */
+}
+
+/* 
+  This is the 'track' of images lined up in a row.
+  We'll move this track left with translateX to simulate sliding. 
+*/
+.carousel-track {
+    display: flex;
+}
+
+/* 
+  Force all images to have the same size for consistency.
+  Adjust width/height as needed. 
+*/
+.carousel-image {
+    width: 300px;
+    height: 400px;
+    /* or 'auto' if you want to keep aspect ratio */
+    object-fit: cover;
+    /* crop to fill the area */
 }
