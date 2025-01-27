@@ -72,12 +72,12 @@ const ProblemSection = () => {
 
     return (
         <section className="problem-section">
-            <h2>The Struggle to Find Local Events</h2>
-            <p>
+            <h2 className="problem-title">The Struggle to Find Local Events</h2>
+            <p className="problem-subtitle">
                 Spending hours searching for things to do? Missing out on local deals
                 and hidden gems? You’re not alone.
             </p>
-            <p className="empathy-text">We’ve all been there — but not anymore.</p>
+            {/*<p className="empathy-text">We’ve all been there — but not anymore.</p> */}
 
 
             {/* Carousel Wrapper */}
