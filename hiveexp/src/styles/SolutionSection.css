@@ -7,20 +7,20 @@
     color: #fff;
     /* White text to pop off the background */
     padding: 60px 20px;
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
 }
 
 /*******************************************************
   TEXT WRAPPER (TOP AREA)
 *******************************************************/
-.solution-text-wrapper {
-    /* max-width: 1000px; */
-    /* margin: 0 auto 40px; */
-    /* Centered, extra bottom spacing before cards */
-    /* text-align: left; */
-    /* If you want it centered, switch to 'center' */
-    margin: 0;
-}
+/* .solution-text-wrapper { */
+/* max-width: 1000px; */
+/* margin: 0 auto 40px; */
+/* Centered, extra bottom spacing before cards */
+/* text-align: left; */
+/* If you want it centered, switch to 'center' */
+/* margin: 0; */
+/* } */
 
 .solution-title {
     font-family: "PassionOne", sans-serif;
@@ -31,6 +31,7 @@
     /* text-align: left; */
     justify-content: center;
     display: flex;
+    text-transform: uppercase;
 }
 
 .solution-subtitle {

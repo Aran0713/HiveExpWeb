@@ -1,18 +1,19 @@
 .company-slider-section {
-    background-color: white;
-    padding-top: 20px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
 }
 
 .company-slider-title {
-    font-family: "Poppins", sans-serif;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: black;
-    text-transform: uppercase;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "PassionOne", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  color: black;
+  text-transform: uppercase;
 }
 
 /********************************************************
@@ -20,12 +21,12 @@
   - Set a fixed width and hide overflowing images.
 ********************************************************/
 .company-carousel-container {
-    width: 2000px;
-    /* Adjust to control how many logos are visible at once */
-    margin: 0 auto;
-    overflow: hidden;
-    border-radius: 10px;
-    /* optional */
+  width: 2000px;
+  /* Adjust to control how many logos are visible at once */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  /* optional */
 }
 
 /********************************************************
@@ -34,7 +35,7 @@
   - We'll move this track left with translateX to simulate a slide.
 ********************************************************/
 .company-carousel-track {
-    display: flex;
+  display: flex;
 }
 
 /********************************************************
@@ -42,11 +43,11 @@
   - Fix each logo's width/height for consistency
 ********************************************************/
 .company-carousel-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    /* or 'cover' if you want it cropped */
-    /* margin-right: 20px; */
-    /* gap between logos, adjust as needed */
-    flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  /* or 'cover' if you want it cropped */
+  /* margin-right: 20px; */
+  /* gap between logos, adjust as needed */
+  flex-shrink: 0;
 }

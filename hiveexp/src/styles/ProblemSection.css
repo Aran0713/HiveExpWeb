@@ -3,12 +3,24 @@
   text-align: center;
   background-color: white;
   color: black;
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: "PassionOne", sans-serif;
   font-size: 1.5rem;
+  text-transform: uppercase; */
+}
+
+.problem-title {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "PassionOne", sans-serif;
+  font-size: 2rem;
+  /* margin-bottom: 40px; */
+  color: black;
+  text-transform: uppercase;
 }
 
 .problem-subtitle {
   font-size: 1.2rem;
+  text-transform: none;
 }
 
 .problem-section .empathy-text {

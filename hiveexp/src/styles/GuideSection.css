@@ -1,23 +1,104 @@
+/*******************************************************
+  GUIDE SECTION LAYOUT
+*******************************************************/
 .guide-section {
-    padding: 80px 20px;
-    text-align: center;
-    background-color: #1e1e1e;
+    padding: 20px 20px 60px 20px;
+    background-color: black;
+    /* dark background */
     color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
-.guide-section h2 {
+.guide-title {
     font-family: "PassionOne", sans-serif;
-    color: gold;
+    font-size: 2.5rem;
+    color: #f2c94c;
+    margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
-.guide-section .steps {
+/* Two columns side-by-side on larger screens */
+.guide-columns {
+    display: flex;
+    flex-wrap: wrap;
+    /* allow wrapping on smaller screens */
+    justify-content: center;
+    gap: 10%;
+}
+
+/*******************************************************
+  GUIDE COLUMN (Users & Hosts)
+*******************************************************/
+.guide-column {
+    background: linear-gradient(135deg, #F2DC99, white);
+    /* darker background for cards */
+    border-radius: 10px;
+    padding: 10px 20px;
+    max-width: 500px;
+    /* optional: control column width */
+    flex: 1 1 400px;
+    /* grow/shrink, but min 400px wide */
+    text-align: left;
+    /* left-align text inside the column */
+}
+
+.guide-subtitle {
+    font-family: "PassionOne", sans-serif;
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*******************************************************
+  INDIVIDUAL STEPS
+*******************************************************/
+.guide-steps {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.guide-section .step {
-    background: #333;
+.step {
+    background: linear-gradient(135deg, #DAA520, #f2c94c);
+    color: black;
+    /* an even darker container for each step */
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.step:hover {
+    transform: translateY(-3px);
+    background: #f2c94c;
+    /* slightly lighter on hover for emphasis */
+}
+
+.step h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: black;
+    /* lighter text color */
+}
+
+.step p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    color: #FFF9E9;
+}
+
+/*******************************************************
+  RESPONSIVE BEHAVIOR
+*******************************************************/
+/* Stack columns on smaller screens */
+@media (max-width: 800px) {
+    .guide-columns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guide-column {
+        max-width: 600px;
+    }
 }
