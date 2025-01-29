@@ -8,7 +8,7 @@
 
 .plan-section h2 {
     font-family: "PassionOne", sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: #000;
     margin-bottom: 10px;
 }
@@ -19,6 +19,7 @@
     max-width: 800px;
     margin: 0 auto 40px auto;
     line-height: 1.4;
+    font-size: 1.1rem;
 }
 
 .pricing-table {
@@ -60,7 +61,8 @@
 /* Using a UL for bullet points */
 .plan-description {
     text-align: left;
-    font-size: 0.95rem;
+    /* font-size: 0.95rem; */
+    font-size: 1.1rem;
     color: #555;
     margin-bottom: 20px;
     list-style-type: disc;

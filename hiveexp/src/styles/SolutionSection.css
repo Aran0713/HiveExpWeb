@@ -37,8 +37,9 @@
 .solution-subtitle {
     font-family: "Poppins", sans-serif;
     font-size: 1.2rem;
-    line-height: 1.5;
+    line-height: 1.2;
     margin-bottom: 20px;
+    margin-top: 20px;
     color: #eee;
     justify-content: center;
     display: flex;

@@ -1,0 +1,121 @@
+/*******************************************************
+  SECTION WRAPPER
+*******************************************************/
+.ig-section {
+    background-color: #fff;
+    /* match your site’s background or use #000 for dark */
+    color: #000;
+    padding: 60px 20px;
+    font-family: "Poppins", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* center horizontally */
+    text-align: center;
+}
+
+/*******************************************************
+  TITLES & SUBTITLE
+*******************************************************/
+.ig-title {
+    font-family: "PassionOne", sans-serif;
+    /* match your headings font */
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.ig-subtitle {
+    font-size: 1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.4;
+}
+
+/*******************************************************
+  INSTAGRAM FEED
+*******************************************************/
+.ig-feed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* space between posts */
+    margin-bottom: 30px;
+}
+
+.ig-post {
+    width: 200px;
+    /* adjust to your liking */
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid #f2c94c;
+    /* gold border for branding */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ig-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.ig-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/*******************************************************
+  BUTTONS ROW
+*******************************************************/
+.ig-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ig-btn {
+    background-color: #f2c94c;
+    /* gold color */
+    color: #000;
+    font-weight: 600;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    /* for <a> links */
+    transition: background 0.2s ease;
+}
+
+.ig-btn:hover {
+    background-color: #e6b937;
+    /* slightly darker gold */
+}
+
+/* Distinguish the two buttons if you want different styles */
+/* e.g., can be slightly smaller, or keep as is */
+/* style as needed or keep consistent with .ig-btn */
+/* .ig-load-more {
+}
+
+.ig-follow {
+} */
+
+/*******************************************************
+  RESPONSIVE
+*******************************************************/
+@media (max-width: 768px) {
+    .ig-feed {
+        justify-content: center;
+    }
+
+    .ig-post {
+        width: 150px;
+        height: 150px;
+    }
+}
