@@ -10,6 +10,7 @@ import SuccessSection from "../components/SuccessSection";
 import FooterSection from "../components/FooterSection";
 import Header from "../components/Header";
 import CompanySliderSection from "../components/CompanySliderSection";
+import InstagramSection from "../components/InstagramSection";
 
 
 const HomePage = () => {
@@ -23,6 +24,7 @@ const HomePage = () => {
             <GuideSection />
             <PlanSection />
             <TestimonialsSection />
+            <InstagramSection />
             <AvoidFailureSection />
             <SuccessSection />
             <FooterSection />
