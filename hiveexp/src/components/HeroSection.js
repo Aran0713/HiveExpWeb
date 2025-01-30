@@ -14,7 +14,12 @@ const HeroSection = () => {
                     just one click.
                 </p>
                 <div className="hero-buttons">
-                    <a href="/download" className="btn btn-download">
+                    <a
+                        href="https://tr.ee/Pq1rXt6VOQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-download"
+                    >
                         Download the App
                     </a>
                     <a href="/schedule" className="btn btn-schedule">

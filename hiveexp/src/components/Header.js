@@ -1,21 +1,62 @@
 import React from "react";
 import "../styles/Header.css";
+import { FaPhone } from "react-icons/fa";
 
 const Header = () => {
     return (
         <header className="header">
-            <div className="header-container">
-                <img
-                    src="/HiveLogo.png"
-                    alt="HiveExp Logo"
-                    className="header-logo-img"
-                />
-                <h1 className="header-logo-text">HiveExp</h1>
-            </div>
+            <div className="header-inner">
 
-            <div className="header-button">
-                <a href="/download" className="btn btn-download">Download the App</a>
-                <a href="/schedule" className="btn btn-schedule">Schedule a Call</a>
+                {/* Desktop Left: Nav Links */}
+                <nav className="desktop-left-nav">
+                    <a href="/home" className="nav-link">Home</a>
+                    <a href="/contact" className="nav-link">Contact Us</a>
+                </nav>
+
+
+                {/* Center: Logo + Brand */}
+                <div className="center-brand">
+                    <img
+                        src="/HiveLogo.png"
+                        alt="HiveExp Logo"
+                        className="header-logo-img"
+                    />
+                    <h1 className="header-logo-text">HiveExp</h1>
+                </div>
+
+                {/* Desktop Right: Buttons */}
+                <div className="desktop-right-btns">
+                    <a
+                        href="https://tr.ee/Pq1rXt6VOQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-download"
+                    >
+                        Download the App
+                    </a>
+                    <a href="/schedule" className="btn btn-schedule">
+                        Schedule a Call
+                    </a>
+                </div>
+
+
+                {/* Mobile Right: Phone Icon (Only visible on mobile) 
+                <div className="mobile-phone-icon">
+                    <a href="/contact" className="phone-icon-link">
+                        <img
+                            src="/phoneIcon.jpg"
+                            alt="Call"
+                            className="phone-icon-img"
+                        />
+                    </a>
+                </div> */}
+
+                <div className="mobile-phone-icon">
+                    <a href="/contact" className="phone-icon-link">
+                        <FaPhone className="phone-icon-svg" />
+                    </a>
+                </div>
+
             </div>
         </header>
     );
