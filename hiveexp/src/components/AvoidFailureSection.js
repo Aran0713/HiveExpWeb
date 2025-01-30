@@ -80,8 +80,7 @@ const AvoidFailureSection = () => {
         <section className="avoid-failure-section">
             <h2>Don’t Miss Out!</h2>
             <p>
-                Stay in the dark about amazing events and miss out on unforgettable memories?
-                Let HiveExp keep you in the loop!
+                Don’t miss out on the best years of your life! Stay in the loop with HiveExp—because these are the stories you’ll tell forever!!!
             </p>
             <div className="avoid-failure-carousel-container">
                 {/* Sliding track */}
