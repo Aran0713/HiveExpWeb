@@ -1,17 +1,20 @@
 .avoid-failure-section {
-    padding: 80px 20px;
+    padding: 30px 20px 20px 20px;
     text-align: center;
-    background-color: #1e1e1e;
-    color: white;
+    background: linear-gradient(90deg, #F2DC99, white);
+    color: black;
 }
 
 .avoid-failure-section h2 {
     font-family: "PassionOne", sans-serif;
-    color: gold;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 10px;
 }
 
 .avoid-failure-section p {
     font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
     margin: 20px 0;
 }
 
@@ -19,4 +22,27 @@
     max-width: 100%;
     border-radius: 10px;
     margin-top: 20px;
+}
+
+.avoid-failure-carousel-container {
+    width: 2100px;
+    /* Adjust to control how many logos are visible at once */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    /* optional */
+}
+
+.avoid-failure-carousel-track {
+    display: flex;
+}
+
+.avoid-failure-carousel-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    /* or 'cover' if you want it cropped */
+    /* margin-right: 20px; */
+    /* gap between logos, adjust as needed */
+    flex-shrink: 0;
 }
