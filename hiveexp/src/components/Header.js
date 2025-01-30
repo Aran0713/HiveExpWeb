@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Header.css";
 import { FaPhone } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
@@ -9,8 +10,8 @@ const Header = () => {
 
                 {/* Desktop Left: Nav Links */}
                 <nav className="desktop-left-nav">
-                    <a href="/home" className="nav-link">Home</a>
-                    <a href="/contact" className="nav-link">Contact Us</a>
+                    <Link to="/" className="nav-link">Home</Link>
+                    <Link to="/contact" className="nav-link">Contact Us</Link>
                 </nav>
 
 
