@@ -20,7 +20,7 @@ const SuccessSection = () => {
                 >
                     Download the App
                 </a>
-                <a href="/schedule" className="btn btn-schedule">Contact Us</a>
+                <a href="/contact" className="btn btn-schedule">Contact Us</a>
             </div>
         </section>
     );

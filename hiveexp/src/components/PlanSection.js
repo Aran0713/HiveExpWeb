@@ -25,7 +25,7 @@ const PlanSection = () => {
                         <li>24/7 support—our team is here to help</li>
                     </ul>
                     <p className="price">$0 (One-Time)</p>
-                    <button className="buy-button">Get Started</button>
+                    <a href="/contact" className="buy-button">Get Started</a>
                 </div>
 
                 {/* Social Boost */}
@@ -37,7 +37,7 @@ const PlanSection = () => {
                         <li>One social media shoutout on HiveExp’s channels</li>
                     </ul>
                     <p className="price">$49 (One-Time)</p>
-                    <button className="buy-button">Boost It</button>
+                    <a href="/contact" className="buy-button">Boost It</a>
                 </div>
 
                 {/* Enhanced Exposure */}
@@ -49,7 +49,7 @@ const PlanSection = () => {
                         <li>Edited highlight reel + raw footage</li>
                     </ul>
                     <p className="price">$79 (One-Time)</p>
-                    <button className="buy-button">Get Enhanced</button>
+                    <a href="/contact" className="buy-button">Get Enhanced</a>
                 </div>
 
                 {/* All-Out Premium */}
@@ -62,7 +62,7 @@ const PlanSection = () => {
                         <li>Multiple social media promotions</li>
                     </ul>
                     <p className="price">$499 (One-Time)</p>
-                    <button className="buy-button">All Out Upgrade</button>
+                    <a href="/contact" className="buy-button">All Out Upgrade</a>
                 </div>
 
             </div>

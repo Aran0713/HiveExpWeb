@@ -26,6 +26,7 @@
 
 .success-section .cta-buttons {
     display: flex;
+    max-width: 100%;
     justify-content: center;
     gap: 20px;
     /* margin-top: 20px; */
@@ -57,15 +58,19 @@
     border: none;
 }
 
+.success-section .btn-linktree {
+    background-color: black;
+    color: #DAA520;
+    border: 2px solid #DAA520;
+}
+
 .success-section .btn-download {
-    /* background-color: gold; */
     background: linear-gradient(90deg, #ffcc33, #DAA520);
     color: black;
 }
 
 .success-section .btn-schedule {
     background-color: black;
-    /* background: linear-gradient(90deg, white, #eeeeee); */
     color: #DAA520;
     border: 2px solid #DAA520;
 }

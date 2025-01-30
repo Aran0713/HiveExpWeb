@@ -22,7 +22,7 @@ const HeroSection = () => {
                     >
                         Download the App
                     </a>
-                    <a href="/schedule" className="btn btn-schedule">
+                    <a href="/contact" className="btn btn-schedule">
                         Schedule a Call
                     </a>
                 </div>

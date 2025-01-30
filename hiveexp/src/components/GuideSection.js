@@ -41,8 +41,7 @@ const GuideSection = () => {
                         <div className="step">
                             <h4>3. Boost Your Reach</h4>
                             <p>
-                                Want more publicity? We’ll promote your event on social media,
-                                capture photos &amp; videos, and send you all the content.
+                                Want more publicity? We’ll promote your event on social media, capture content, and let you buy ads directly on the app.
                             </p>
                         </div>
                     </div>
