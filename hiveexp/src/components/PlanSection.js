@@ -4,7 +4,7 @@ import "../styles/PlanSection.css";
 const PlanSection = () => {
     return (
         <section className="plan-section">
-            <h2>Boost Your Business with HiveExp</h2>
+            <h2>Boost Your Reach</h2>
             <p className="plan-subtitle">
                 Choose the perfect one-time package to elevate your event—from basic
                 listings to complete coverage. <br />

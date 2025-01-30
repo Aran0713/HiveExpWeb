@@ -61,9 +61,22 @@
     cursor: pointer;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* background: linear-gradient(90deg, #ffcc33, #DAA520); */
+    /* color: black; */
+    border: none;
+}
+
+.header-button .btn-download {
+    /* background-color: gold; */
     background: linear-gradient(90deg, #ffcc33, #DAA520);
     color: black;
-    border: none;
+}
+
+.header-button .btn-schedule {
+    background-color: black;
+    /* background: linear-gradient(90deg, white, #eeeeee); */
+    color: #DAA520;
+    border: 2px solid #DAA520;
 }
 
 .header-button .btn:hover {

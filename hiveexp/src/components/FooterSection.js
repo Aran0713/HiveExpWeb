@@ -5,6 +5,7 @@ const FooterSection = () => {
     return (
         <footer className="footer-section">
             <div className="footer-content">
+                {/* 
                 <h3>Stay Connected</h3>
                 <div className="footer-links">
                     <a href="/download">Download the App</a>
@@ -15,6 +16,7 @@ const FooterSection = () => {
                     <input type="email" placeholder="Enter your email" />
                     <button type="submit">Subscribe</button>
                 </form>
+                */}
                 <p>&copy; {new Date().getFullYear()} HiveExp. All rights reserved.</p>
             </div>
         </footer>

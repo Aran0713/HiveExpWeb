@@ -13,7 +13,7 @@ const SuccessSection = () => {
             <p>Download HiveExp today and start creating memories!</p>
             <div className="cta-buttons">
                 <a href="/download" className="btn btn-download">Download the App</a>
-                <a href="/schedule" className="btn btn-schedule">Schedule a Call</a>
+                <a href="/schedule" className="btn btn-schedule">Contact Us</a>
             </div>
         </section>
     );

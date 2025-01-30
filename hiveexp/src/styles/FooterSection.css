@@ -1,5 +1,6 @@
 .footer-section {
-    background-color: #1e1e1e;
+    border-top: #aaa 1px solid;
+    background-color: black;
     color: white;
     padding: 40px 20px;
     text-align: center;

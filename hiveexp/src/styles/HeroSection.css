@@ -53,12 +53,14 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: linear-gradient(90deg, #ffcc33, #DAA520);
-    color: white;
+    /* color: white; */
+    color: black;
     border: none;
 }
 
 .hero-buttons .btn-schedule {
-    background: linear-gradient(90deg, white, #eeeeee);
+    /* background: linear-gradient(90deg, white, #eeeeee); */
+    background: black;
     /* background: linear-gradient(90deg, #ffcc33, #DAA520); */
     color: #DAA520;
     border: 2px solid #DAA520;
