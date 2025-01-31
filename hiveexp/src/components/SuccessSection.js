@@ -1,7 +1,11 @@
 import React from "react";
 import "../styles/SuccessSection.css";
+import { useLocation } from "react-router-dom";
+
 
 const SuccessSection = () => {
+    const location = useLocation(); // Get the current page route
+    const isContactPage = location.pathname === "/contact";
     return (
         <section className="success-section">
             <h2>Join the Hive</h2>
@@ -20,7 +24,9 @@ const SuccessSection = () => {
                 >
                     Download the App
                 </a>
-                <a href="/contact" className="btn btn-schedule">Contact Us</a>
+                {!isContactPage && (
+                    <a href="/contact" className="btn btn-schedule">Contact Us</a>
+                )}
             </div>
         </section>
     );

@@ -1,17 +1,24 @@
 import React from "react";
 import "../styles/PlanSection.css";
+import { useLocation } from "react-router-dom";
 
 const PlanSection = () => {
+
+    const location = useLocation(); // Get the current page route
+    const isContactPage = location.pathname === "/contact";
+
     return (
         <section className="plan-section">
             <h2>Boost Your Reach</h2>
             <p className="plan-subtitle">
                 Choose the perfect one-time package to elevate your event—from basic
                 listings to complete coverage. <br />
-                <strong>
-                    Each button below leads to a page where you can email us about your
-                    chosen plan, schedule a free call, or share event details.
-                </strong>
+                {!isContactPage && (
+                    <strong>
+                        Each button below leads to a page where you can email us about your
+                        chosen plan, schedule a free call, or share event details.
+                    </strong>
+                )}
             </p>
 
             <div className="pricing-table">
