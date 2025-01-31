@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 const PlanSection = () => {
 
-    const location = useLocation(); // Get the current page route
+    const location = useLocation();
     const isContactPage = location.pathname === "/contact";
 
     return (

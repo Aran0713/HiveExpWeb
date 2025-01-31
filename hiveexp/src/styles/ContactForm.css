@@ -99,6 +99,25 @@
     text-decoration: underline;
 }
 
+/* Error Message Styling */
+.error-text {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: left;
+}
+
+.error-input {
+    border: 2px solid red !important;
+}
+
+/* General Error Message Below Submit */
+.general-error {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
 @media (max-width: 768px) {
     .contact-container {
         width: 90%;

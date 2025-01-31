@@ -1,9 +1,14 @@
 import React from "react";
 import "../styles/Header.css";
-import { FaPhone } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { FaHome } from "react-icons/fa";
+import { MdCall } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+
+    const location = useLocation();
+    const isContactPage = location.pathname === "/contact";
+
     return (
         <header className="header">
             <div className="header-inner">
@@ -41,11 +46,21 @@ const Header = () => {
                 </div>
 
                 {/* Mobile Phone Icon */}
-                <div className="mobile-phone-icon">
-                    <a href="/contact" className="phone-icon-link">
-                        <FaPhone className="phone-icon-svg" />
-                    </a>
-                </div>
+                {!isContactPage && (
+                    <div className="mobile-phone-icon">
+                        <a href="/contact" className="phone-icon-link">
+                            <MdCall className="phone-icon-svg" />
+                        </a>
+                    </div>
+                )}
+                {isContactPage && (
+                    <div className="mobile-phone-icon">
+                        <a href="/" className="phone-icon-link">
+                            <FaHome className="phone-icon-svg" />
+                        </a>
+                    </div>
+                )}
+
 
             </div>
         </header>

@@ -20,6 +20,9 @@ const FooterSection = () => {
                     <a href="https://tr.ee/LFdoCuS-Ha" target="_blank" rel="noopener noreferrer">
                         TikTok
                     </a>
+                    <a href="https://www.youtube.com/@HiveExp" target="_blank" rel="noopener noreferrer">
+                        YouTube
+                    </a>
                     <a href="https://tr.ee/WINuT38IEB" target="_blank" rel="noopener noreferrer">
                         Feature Request
                     </a>
