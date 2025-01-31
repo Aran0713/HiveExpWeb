@@ -4,6 +4,7 @@ import "../styles/ContactForm.css";
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: "",
+        company: "",
         email: "",
         phone: "",
         package: "",
@@ -20,7 +21,7 @@ const ContactForm = () => {
         setErrors({ ...errors, [e.target.name]: "" });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         let newErrors = {};
 
@@ -36,12 +37,25 @@ const ContactForm = () => {
             return;
         }
 
+        // Construct email body with correct encoding
+        const subject = encodeURIComponent(`Contact Form Submission - ${formData.company}`);
+        const body = encodeURIComponent(
+            `Full Name: ${formData.name}
+            Company Name: ${formData.company}
+            Email: ${formData.email}
+            Phone: ${formData.phone}
+            Package: ${formData.package}
+            Message: ${formData.message}`
+        );
+
+        // Open email client
+        window.location.href = `mailto:aran@eventhivexp.com?subject=${subject}&body=${body}`;
+
         // Successful submission
         setFormSubmitted(true);
-        alert("Your message has been sent!");
 
         // Reset form
-        setFormData({ name: "", email: "", phone: "", package: "", message: "" });
+        // setFormData({ name: "", company: "", email: "", phone: "", package: "", message: "" });
         setErrors({});
     };
 
@@ -54,6 +68,7 @@ const ContactForm = () => {
                 </p>
 
                 <form className="contact-form" onSubmit={handleSubmit}>
+                    {/* Full Name */}
                     <label>Full Name</label>
                     <input
                         type="text"
@@ -65,6 +80,19 @@ const ContactForm = () => {
                     />
                     {errors.name && <p className="error-text">{errors.name}</p>}
 
+                    {/* Company Name */}
+                    <label>Company Name</label>
+                    <input
+                        type="text"
+                        name="company"
+                        placeholder="Enter your company name"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className={errors.company ? "error-input" : ""}
+                    />
+                    {errors.company && <p className="error-text">{errors.company}</p>}
+
+                    {/* Email */}
                     <label>Email</label>
                     <input
                         type="email"
@@ -76,6 +104,7 @@ const ContactForm = () => {
                     />
                     {errors.email && <p className="error-text">{errors.email}</p>}
 
+                    {/* Phone */}
                     <label>Phone Number</label>
                     <input
                         type="text"
@@ -87,6 +116,7 @@ const ContactForm = () => {
                     />
                     {errors.phone && <p className="error-text">{errors.phone}</p>}
 
+                    {/* Package */}
                     <label>What package are you interested in?</label>
                     <select
                         name="package"
@@ -103,6 +133,7 @@ const ContactForm = () => {
                     </select>
                     {errors.package && <p className="error-text">{errors.package}</p>}
 
+                    {/* Message */}
                     <label>How can we help you?</label>
                     <textarea
                         name="message"
