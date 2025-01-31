@@ -41,7 +41,7 @@ const ContactForm = () => {
         const subject = encodeURIComponent(`Contact Form Submission - ${formData.company}`);
         const body = encodeURIComponent(
             `Full Name: ${formData.name}
-            Company Name: ${formData.company}
+            Organization Name: ${formData.company}
             Email: ${formData.email}
             Phone: ${formData.phone}
             Package: ${formData.package}
@@ -81,11 +81,11 @@ const ContactForm = () => {
                     {errors.name && <p className="error-text">{errors.name}</p>}
 
                     {/* Company Name */}
-                    <label>Company Name</label>
+                    <label>Organization Name</label>
                     <input
                         type="text"
                         name="company"
-                        placeholder="Enter your company name"
+                        placeholder="Enter your organization name"
                         value={formData.company}
                         onChange={handleChange}
                         className={errors.company ? "error-input" : ""}
