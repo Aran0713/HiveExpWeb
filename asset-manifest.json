@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Aran0713/HiveExpWeb/static/css/main.5d6646e7.css",
-    "main.js": "/Aran0713/HiveExpWeb/static/js/main.39e12a40.js",
-    "static/js/453.f222b5db.chunk.js": "/Aran0713/HiveExpWeb/static/js/453.f222b5db.chunk.js",
-    "index.html": "/Aran0713/HiveExpWeb/index.html",
-    "main.5d6646e7.css.map": "/Aran0713/HiveExpWeb/static/css/main.5d6646e7.css.map",
-    "main.39e12a40.js.map": "/Aran0713/HiveExpWeb/static/js/main.39e12a40.js.map",
-    "453.f222b5db.chunk.js.map": "/Aran0713/HiveExpWeb/static/js/453.f222b5db.chunk.js.map"
+    "main.css": "/HiveExpWeb/static/css/main.5d6646e7.css",
+    "main.js": "/HiveExpWeb/static/js/main.a75b0498.js",
+    "static/js/453.f222b5db.chunk.js": "/HiveExpWeb/static/js/453.f222b5db.chunk.js",
+    "index.html": "/HiveExpWeb/index.html",
+    "main.5d6646e7.css.map": "/HiveExpWeb/static/css/main.5d6646e7.css.map",
+    "main.a75b0498.js.map": "/HiveExpWeb/static/js/main.a75b0498.js.map",
+    "453.f222b5db.chunk.js.map": "/HiveExpWeb/static/js/453.f222b5db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d6646e7.css",
-    "static/js/main.39e12a40.js"
+    "static/js/main.a75b0498.js"
   ]
 }
