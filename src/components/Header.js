@@ -23,7 +23,7 @@ const Header = () => {
                 {/* Center: Logo + Brand */}
                 <div className="center-brand">
                     <img
-                        src="/HiveLogo.png"
+                        src="HiveLogo.png"
                         alt="HiveExp Logo"
                         className="header-logo-img"
                     />

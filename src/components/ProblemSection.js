@@ -2,20 +2,20 @@ import React, { useState, useEffect, useRef } from "react";
 import "../styles/ProblemSection.css";
 
 const images = [
-    "/hivePhotos/hiveGlasses1.jpg",
-    "/hivePhotos/hiveGlasses2.jpg",
-    "/hivePhotos/hiveGlasses3.jpg",
-    // "/hivePhotos/hiveGlasses4.jpg",
-    "/hivePhotos/hiveGlasses5.jpg",
-    "/hivePhotos/hiveGlasses6.jpg",
-    "/hivePhotos/hiveGlasses7.jpg",
-    "/hivePhotos/hiveGlasses8.jpg",
-    "/hivePhotos/hiveGlasses9.jpg",
-    // "/hivePhotos/hiveGlasses10.jpg",
-    "/hivePhotos/hiveGlasses11.jpg",
-    "/hivePhotos/hiveGlasses12.jpg",
-    // "/hivePhotos/hiveGlasses13.jpg",
-    "/hivePhotos/hiveGlasses14.jpg",
+    "hivePhotos/hiveGlasses1.jpg",
+    "hivePhotos/hiveGlasses2.jpg",
+    "hivePhotos/hiveGlasses3.jpg",
+    // "hivePhotos/hiveGlasses4.jpg",
+    "hivePhotos/hiveGlasses5.jpg",
+    "hivePhotos/hiveGlasses6.jpg",
+    "hivePhotos/hiveGlasses7.jpg",
+    "hivePhotos/hiveGlasses8.jpg",
+    "hivePhotos/hiveGlasses9.jpg",
+    // "hivePhotos/hiveGlasses10.jpg",
+    "hivePhotos/hiveGlasses11.jpg",
+    "hivePhotos/hiveGlasses12.jpg",
+    // "hivePhotos/hiveGlasses13.jpg",
+    "hivePhotos/hiveGlasses14.jpg",
 ];
 
 const ProblemSection = () => {

@@ -10,7 +10,7 @@ const SuccessSection = () => {
         <section className="success-section">
             <h2>Join the Hive</h2>
             <img
-                src="/HiveLogo.png"
+                src="HiveLogo.png"
                 alt="HiveExp Logo"
                 className="success-logo-img"
             />

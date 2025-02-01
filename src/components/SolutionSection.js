@@ -21,7 +21,7 @@ const SolutionSection = () => {
                 {/* CARD 1: APP INTRO */}
                 <div className="solution-card">
                     <img
-                        src="/appScreenshots/ss9.png"
+                        src="appScreenshots/ss9.png"
                         alt="HiveExp App Screenshot - Intro"
                         className="card-image"
                     />
@@ -35,7 +35,7 @@ const SolutionSection = () => {
                 {/* CARD 2: USER PROFILE */}
                 <div className="solution-card">
                     <img
-                        src="/appScreenshots/ss2.png"
+                        src="appScreenshots/ss2.png"
                         alt="HiveExp App Screenshot - User Profile"
                         className="card-image"
                     />
@@ -49,7 +49,7 @@ const SolutionSection = () => {
                 {/* CARD 3: EVENT PLANNER */}
                 <div className="solution-card">
                     <img
-                        src="/appScreenshots/ss3.png"
+                        src="appScreenshots/ss3.png"
                         alt="HiveExp App Screenshot - Event Planner"
                         className="card-image"
                     />
@@ -62,7 +62,7 @@ const SolutionSection = () => {
                 {/* CARD 4: SEARCH */}
                 <div className="solution-card">
                     <img
-                        src="/appScreenshots/ss6.png"
+                        src="appScreenshots/ss6.png"
                         alt="HiveExp App Screenshot - Search"
                         className="card-image"
                     />
