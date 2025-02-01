@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/HiveExpWeb/static/css/main.5d6646e7.css",
-    "main.js": "/HiveExpWeb/static/js/main.69d3f43c.js",
+    "main.js": "/HiveExpWeb/static/js/main.e01fae9f.js",
     "static/js/453.f222b5db.chunk.js": "/HiveExpWeb/static/js/453.f222b5db.chunk.js",
     "index.html": "/HiveExpWeb/index.html",
     "main.5d6646e7.css.map": "/HiveExpWeb/static/css/main.5d6646e7.css.map",
-    "main.69d3f43c.js.map": "/HiveExpWeb/static/js/main.69d3f43c.js.map",
+    "main.e01fae9f.js.map": "/HiveExpWeb/static/js/main.e01fae9f.js.map",
     "453.f222b5db.chunk.js.map": "/HiveExpWeb/static/js/453.f222b5db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5d6646e7.css",
-    "static/js/main.69d3f43c.js"
+    "static/js/main.e01fae9f.js"
   ]
 }
