@@ -2,8 +2,8 @@
   background-color: white;
   padding-top: 20px;
   padding-bottom: 50px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
 }
 
@@ -22,6 +22,8 @@
 ********************************************************/
 .company-carousel-container {
   width: 2000px;
+  /* width: 100%;
+  max-width: 100%; */
   /* Adjust to control how many logos are visible at once */
   margin: 0 auto;
   overflow: hidden;
@@ -50,4 +52,11 @@
   /* margin-right: 20px; */
   /* gap between logos, adjust as needed */
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .company-carousel-container {
+    width: 100%;
+    max-width: 100%;
+  }
 }

@@ -49,3 +49,10 @@
     /* gap between logos, adjust as needed */
     flex-shrink: 0;
 }
+
+@media (max-width: 768px) {
+    .avoid-failure-carousel-container {
+        width: 100%;
+        max-width: 100%;
+    }
+}

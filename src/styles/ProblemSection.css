@@ -65,3 +65,10 @@
   object-fit: cover;
   /* crop to fill the area */
 }
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
