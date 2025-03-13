@@ -11,7 +11,7 @@ const HeroSection = () => {
                 </h1>
                 <p>
                     Find hidden gems, events, and deals around your university in
-                    just one click.
+                    just one click!
                 </p>
                 <div className="hero-buttons">
                     <a
