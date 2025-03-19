@@ -72,17 +72,30 @@ const ProblemSection = () => {
 
     return (
         <section className="problem-section">
+            {/* Wave divider at the top */}
+            <div className="wave-divider-top">
+                <svg
+                    viewBox="0 0 1440 80"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path fill="#fff" d="M0,40 C360,80 1080,0 1440,40 L1440,0 L0,0 Z" />
+                </svg>
+            </div>
+
+            {/* Floating hex shapes */}
+            <div className="floating-shapes">
+                <div className="hex-shape shape-1"></div>
+                <div className="hex-shape shape-2"></div>
+            </div>
+
             <h2 className="problem-title">The Struggle to Find Local Events</h2>
             <p className="problem-subtitle">
                 Spending hours searching for things to do? Missing out on local deals
                 and hidden gems? You’re not alone.
             </p>
-            {/*<p className="empathy-text">We’ve all been there — but not anymore.</p> */}
 
-
-            {/* Carousel Wrapper */}
             <div className="carousel-container">
-                {/* Sliding track (flex container) */}
                 <div
                     className="carousel-track"
                     ref={trackRef}
@@ -100,6 +113,16 @@ const ProblemSection = () => {
                 </div>
             </div>
 
+            {/* Wave divider at the bottom */}
+            <div className="wave-divider-bottom">
+                <svg
+                    viewBox="0 0 1440 80"
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path fill="#fff" d="M0,40 C360,0 1080,80 1440,40 L1440,80 L0,80 Z" />
+                </svg>
+            </div>
         </section>
     );
 };

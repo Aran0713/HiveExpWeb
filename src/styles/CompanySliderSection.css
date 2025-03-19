@@ -1,59 +1,145 @@
+/*******************************************************
+  COMPANY SLIDER SECTION
+*******************************************************/
 .company-slider-section {
-  background-color: white;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  padding-left: 5px;
-  padding-right: 5px;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 20px 0px 20px;
   text-align: center;
+
 }
 
+/* Wave divider at the top */
+.wave-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+}
+
+.wave-divider-top svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+@keyframes floatHex {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/*******************************************************
+  TITLE & SUBTITLE
+*******************************************************/
 .company-slider-title {
-  /* font-family: "Poppins", sans-serif; */
   font-family: "PassionOne", sans-serif;
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-  color: black;
+  font-size: 2rem;
+  color: #daa520;
+  /* gold accent */
   text-transform: uppercase;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+  /* above shapes */
 }
 
-/********************************************************
-  Carousel Container
-  - Set a fixed width and hide overflowing images.
-********************************************************/
+.company-slider-subtitle {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/*******************************************************
+  CAROUSEL
+*******************************************************/
 .company-carousel-container {
-  /* width: 2000px; */
-  width: 95%;
-  max-width: 95%;
-  /* width: 100%;
-  max-width: 100%; */
-  /* Adjust to control how many logos are visible at once */
+  width: 85%;
+  max-width: 85%;
   margin: 0 auto;
   overflow: hidden;
+  /* border: 2px solid #daa520; */
+  /* gold border */
   border-radius: 10px;
-  /* optional */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 15px 0;
+  position: relative;
+  z-index: 2;
 }
 
-/********************************************************
-  Carousel Track
-  - Flex container to line up logos horizontally
-  - We'll move this track left with translateX to simulate a slide.
-********************************************************/
 .company-carousel-track {
   display: flex;
 }
 
-/********************************************************
-  Carousel Image (Logo)
-  - Fix each logo's width/height for consistency
-********************************************************/
+/*******************************************************
+  LOGO IMAGES
+*******************************************************/
 .company-carousel-image {
-  width: 200px;
-  height: 200px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  /* or 'cover' if you want it cropped */
-  /* margin-right: 20px; */
-  /* gap between logos, adjust as needed */
   flex-shrink: 0;
+  margin: 0 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+/* Stagger the fade-in slightly for each image */
+.company-carousel-image:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.company-carousel-image:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.company-carousel-image:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+/* ... continue if you want more stagger for each image ... */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hover effect for logos */
+/* .company-carousel-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+} */
+
+/*******************************************************
+  RESPONSIVE
+*******************************************************/
+@media (max-width: 992px) {
+  .company-slider-title {
+    font-size: 1.6rem;
+  }
+
+
 }
 
 @media (max-width: 768px) {
@@ -61,4 +147,8 @@
     width: 100%;
     max-width: 100%;
   }
+
+
+
+
 }

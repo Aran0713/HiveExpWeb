@@ -8,17 +8,20 @@ const SolutionSection = () => {
             <div className="solution-text-wrapper">
                 <h2 className="solution-title">Meet Hive Experience</h2>
                 <p className="solution-subtitle">
-                    HiveExp is your one-stop mobile app for local events, campus happenings, and exclusive deals tailored just for university students.
+                    Imagine never missing the best moments on campus. HiveExp isn’t just an events app—it’s your backstage pass to unforgettable college life. Connect, discover hidden gems, and enjoy exclusive deals crafted for you.
                 </p>
-
                 <p className="solution-subtitle">
-                    Join the buzz with over 1,000+ students and 100+ businesses already on board!
+                    Join thousands of students and local businesses that make HiveExp a vibrant community. Ready to join the hive?
                 </p>
             </div>
 
+
+
+
+
             {/* Cards Row: Showcases 4 screenshots */}
             <div className="solution-cards-row">
-                {/* CARD 1: APP INTRO */}
+                {/* CARD 1 */}
                 <div className="solution-card">
                     <img
                         src="phone-mock2.png"
@@ -27,12 +30,12 @@ const SolutionSection = () => {
                     />
                     <h3 className="card-title">Jump Right In</h3>
                     <p className="card-text">
-                        Start strong with HiveExp’s welcoming screen—discover local events
+                        Start strong with HiveExp’s welcoming screen, discover local events
                         and deals the moment you open the app!
                     </p>
                 </div>
 
-                {/* CARD 2: USER PROFILE */}
+                {/* CARD 2 */}
                 <div className="solution-card">
                     <img
                         src="appScreenshots/ss2.png"
@@ -46,7 +49,7 @@ const SolutionSection = () => {
                     </p>
                 </div>
 
-                {/* CARD 3: EVENT PLANNER */}
+                {/* CARD 3 */}
                 <div className="solution-card">
                     <img
                         src="appScreenshots/ss3.png"
@@ -55,11 +58,12 @@ const SolutionSection = () => {
                     />
                     <h3 className="card-title">Plan &amp; Conquer</h3>
                     <p className="card-text">
-                        From campus clubs to local businesses—list your events and deals for free and keep everyone in the loop!
+                        From campus clubs to local businesses, list your events and deals for free
+                        and keep everyone in the loop!
                     </p>
                 </div>
 
-                {/* CARD 4: SEARCH */}
+                {/* CARD 4 */}
                 <div className="solution-card">
                     <img
                         src="phone-mock.png"
