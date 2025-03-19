@@ -155,7 +155,7 @@ const ContactForm = () => {
             {/* Support Section */}
             <div className="contact-support">
                 <h3>Need Help?</h3>
-                <p>If you have any questions about our packages, event listings, or the app, reach out to our team:</p>
+                <p>If you have any questions about our packages, event/deal listings, or the app, reach out to our team:</p>
                 <p><strong>Email:</strong> <a href="mailto:support@eventhivexp.com">support@eventhivexp.com</a></p>
                 <p><strong>Call or WhatsApp:</strong> <a href="tel:+16476190713">647-619-0713</a></p>
             </div>

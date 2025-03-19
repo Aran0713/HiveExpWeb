@@ -32,7 +32,7 @@ const Header = () => {
                     <Link to="/explore" className="btn btn-explore">
                         Explore Experiences
                     </Link>
-                    <Link to="/list" className="btn btn-list">
+                    <Link to="/listExperience" className="btn btn-list">
                         List Experiences
                     </Link>
                     <a
@@ -62,7 +62,7 @@ const Header = () => {
                     <Link to="/explore" className="mobile-menu-link" onClick={toggleMobileMenu}>
                         Explore Experiences
                     </Link>
-                    <Link to="/list" className="mobile-menu-link" onClick={toggleMobileMenu}>
+                    <Link to="/listExperience" className="mobile-menu-link" onClick={toggleMobileMenu}>
                         List Experiences
                     </Link>
                     <a
