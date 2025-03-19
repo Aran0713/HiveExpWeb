@@ -67,6 +67,7 @@
 .success-section .btn-download {
     background: linear-gradient(90deg, #ffcc33, #DAA520);
     color: black;
+    border: 2px solid #daa520;
 }
 
 .success-section .btn-schedule {

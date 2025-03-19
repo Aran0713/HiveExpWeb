@@ -27,7 +27,9 @@
 }
 
 .avoid-failure-carousel-container {
-    width: 2100px;
+    /* width: 2100px; */
+    width: 95%;
+    max-width: 95%;
     /* Adjust to control how many logos are visible at once */
     margin: 0 auto;
     overflow: hidden;

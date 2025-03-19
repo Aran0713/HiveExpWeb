@@ -1,37 +1,40 @@
-import React from "react";
+// Header.jsx
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Header.css";
-import { FaHome } from "react-icons/fa";
-import { MdCall } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
+    // Track whether mobile menu is open
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    const location = useLocation();
-    const isContactPage = location.pathname === "/contact";
+    // Toggle the mobile menu
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
 
     return (
         <header className="header">
             <div className="header-inner">
-
-                {/* Desktop Left: Nav Links */}
-                <nav className="desktop-left-nav">
-                    <Link to="/" className="nav-link">Home</Link>
-                    <Link to="/contact" className="nav-link">Contact Us</Link>
-                </nav>
-
-
-                {/* Center: Logo + Brand */}
-                <div className="center-brand">
-                    <img
-                        src="HiveLogo.png"
-                        alt="HiveExp Logo"
-                        className="header-logo-img"
-                    />
-                    <h1 className="header-logo-text">HiveExp</h1>
+                {/* Left: Logo + Brand */}
+                <div className="header-left">
+                    <Link to="/" className="brand-logo">
+                        <img
+                            src="HiveLogo.png"
+                            alt="HiveExp Logo"
+                            className="header-logo-img"
+                        />
+                        <h1 className="header-logo-text">HiveExp</h1>
+                    </Link>
                 </div>
 
-                {/* Desktop Right: Buttons */}
-                <div className="desktop-right-btns">
+                {/* Right: Desktop Nav */}
+                <div className="header-right desktop-nav">
+                    <Link to="/explore" className="btn btn-explore">
+                        Explore Experiences
+                    </Link>
+                    <Link to="/list" className="btn btn-list">
+                        List Experiences
+                    </Link>
                     <a
                         href="https://tr.ee/Pq1rXt6VOQ"
                         target="_blank"
@@ -40,29 +43,42 @@ const Header = () => {
                     >
                         Download the App
                     </a>
-                    <a href="/contact" className="btn btn-schedule">
+                    <Link to="/contact" className="btn btn-schedule">
                         Schedule a Call
-                    </a>
+                    </Link>
                 </div>
 
-                {/* Mobile Phone Icon */}
-                {!isContactPage && (
-                    <div className="mobile-phone-icon">
-                        <a href="/contact" className="phone-icon-link">
-                            <MdCall className="phone-icon-svg" />
-                        </a>
-                    </div>
-                )}
-                {isContactPage && (
-                    <div className="mobile-phone-icon">
-                        <a href="/" className="phone-icon-link">
-                            <FaHome className="phone-icon-svg" />
-                        </a>
-                    </div>
-                )}
-
-
+                {/* Hamburger Icon (Mobile) */}
+                <div className="hamburger-icon" onClick={toggleMobileMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
+
+            {/* Mobile Menu (shown when isMobileMenuOpen) */}
+            {isMobileMenuOpen && (
+                <div className="mobile-menu">
+                    <Link to="/explore" className="mobile-menu-link" onClick={toggleMobileMenu}>
+                        Explore Experiences
+                    </Link>
+                    <Link to="/list" className="mobile-menu-link" onClick={toggleMobileMenu}>
+                        List Experiences
+                    </Link>
+                    <a
+                        href="https://tr.ee/Pq1rXt6VOQ"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mobile-menu-link"
+                        onClick={toggleMobileMenu}
+                    >
+                        Download the App
+                    </a>
+                    <Link to="/contact" className="mobile-menu-link" onClick={toggleMobileMenu}>
+                        Schedule a Call
+                    </Link>
+                </div>
+            )}
         </header>
     );
 };

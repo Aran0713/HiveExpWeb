@@ -31,7 +31,7 @@ const GuideSection = () => {
                     <h3 className="guide-subtitle">For Hosts</h3>
                     <div className="guide-steps">
                         <div className="step">
-                            <h4>1. Create &amp; Verify Your Account</h4>
+                            <h4>1. Download the App &amp; Create Your Account</h4>
                             <p>Sign up in minutes to begin posting—totally free.</p>
                         </div>
                         <div className="step">

@@ -21,7 +21,9 @@
   - Set a fixed width and hide overflowing images.
 ********************************************************/
 .company-carousel-container {
-  width: 2000px;
+  /* width: 2000px; */
+  width: 95%;
+  max-width: 95%;
   /* width: 100%;
   max-width: 100%; */
   /* Adjust to control how many logos are visible at once */

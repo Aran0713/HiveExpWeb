@@ -36,7 +36,9 @@
   increase the width.
 */
 .carousel-container {
-  width: 2000px;
+  /* width: 2000px; */
+  width: 95%;
+  max-width: 95%;
   /* Must match the image width you want to show */
   margin: 0 auto;
   overflow: hidden;
