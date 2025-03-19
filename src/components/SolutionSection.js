@@ -21,7 +21,7 @@ const SolutionSection = () => {
                 {/* CARD 1: APP INTRO */}
                 <div className="solution-card">
                     <img
-                        src="appScreenshots/ss9.png"
+                        src="phone-mock2.png"
                         alt="HiveExp App Screenshot - Intro"
                         className="card-image"
                     />
@@ -55,14 +55,14 @@ const SolutionSection = () => {
                     />
                     <h3 className="card-title">Plan &amp; Conquer</h3>
                     <p className="card-text">
-                        From campus clubs to local businesses—list your events for free and keep everyone in the loop!
+                        From campus clubs to local businesses—list your events and deals for free and keep everyone in the loop!
                     </p>
                 </div>
 
                 {/* CARD 4: SEARCH */}
                 <div className="solution-card">
                     <img
-                        src="appScreenshots/ss6.png"
+                        src="phone-mock.png"
                         alt="HiveExp App Screenshot - Search"
                         className="card-image"
                     />

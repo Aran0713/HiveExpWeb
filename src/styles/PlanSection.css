@@ -17,8 +17,8 @@
 .plan-subtitle {
     font-family: "Poppins", sans-serif;
     color: #555;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
+    max-width: 95%;
+    margin: 20px auto 40px auto;
     line-height: 1.4;
     font-size: 1.2rem;
 }

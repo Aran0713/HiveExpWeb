@@ -11,12 +11,12 @@ const PlanSection = () => {
         <section className="plan-section">
             <h2>Boost Your Reach</h2>
             <p className="plan-subtitle">
-                Choose the perfect one-time package to elevate your event—from basic
+                Choose the perfect one-time package to elevate your experience from basic
                 listings to complete coverage. <br />
                 {!isContactPage && (
                     <strong>
                         Each button below leads to a page where you can email us about your
-                        chosen plan, schedule a free call, or share event details.
+                        chosen plan, schedule a free call, or share event/deal details.
                     </strong>
                 )}
             </p>

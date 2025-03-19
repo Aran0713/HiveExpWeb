@@ -35,13 +35,16 @@ const GuideSection = () => {
                             <p>Sign up in minutes to begin posting—totally free.</p>
                         </div>
                         <div className="step">
-                            <h4>2. List Your Events</h4>
-                            <p>Share your upcoming events to the entire HiveExp community.</p>
+                            <h4>2. List Your Experiences</h4>
+                            <p>
+                                Share your upcoming events and deals to the entire HiveExp community.
+                            </p>
                         </div>
                         <div className="step">
                             <h4>3. Boost Your Reach</h4>
                             <p>
-                                Want more publicity? We’ll promote your event on social media, capture content, and let you buy ads directly on the app.
+                                Want more publicity? We’ll promote your experience on social media,
+                                capture content, and let you buy ads directly on the app.
                             </p>
                         </div>
                     </div>
