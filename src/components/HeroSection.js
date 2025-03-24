@@ -18,7 +18,7 @@ const HeroSection = () => {
                     </p>
 
                     <div className="hero-buttons">
-                        <a href="/explore" className="btn hero-btn-explore">
+                        <a href="/search" className="btn hero-btn-explore">
                             Explore Experiences
                         </a>
 

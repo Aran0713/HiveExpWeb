@@ -1,0 +1,23 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-eventhive-prod-200214-authRole",
+      "UnauthRoleArn": "arn:aws:iam::363651527807:role/amplify-eventhive-prod-200214-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::363651527807:role/amplify-eventhive-prod-200214-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-eventhive-prod-200214-deployment",
+      "UnauthRoleName": "amplify-eventhive-prod-200214-unauthRole",
+      "StackName": "amplify-eventhive-prod-200214",
+      "StackId": "arn:aws:cloudformation:ca-central-1:363651527807:stack/amplify-eventhive-prod-200214/342b6320-8584-11ee-8058-0e769e8829b8",
+      "AmplifyAppId": "d3h2dwzic209tt"
+    },
+    "categories": {
+      "auth": {
+        "eventhive30354cef": {}
+      },
+      "storage": {
+        "s34220effa": {}
+      }
+    }
+  }
+}

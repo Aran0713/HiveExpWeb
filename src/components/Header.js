@@ -29,7 +29,7 @@ const Header = () => {
 
                 {/* Right: Desktop Nav */}
                 <div className="header-right desktop-nav">
-                    <Link to="/explore" className="btn btn-explore">
+                    <Link to="/search" className="btn btn-explore">
                         Explore Experiences
                     </Link>
                     <Link to="/listExperience" className="btn btn-list">
@@ -59,7 +59,7 @@ const Header = () => {
             {/* Mobile Menu (shown when isMobileMenuOpen) */}
             {isMobileMenuOpen && (
                 <div className="mobile-menu">
-                    <Link to="/explore" className="mobile-menu-link" onClick={toggleMobileMenu}>
+                    <Link to="/search" className="mobile-menu-link" onClick={toggleMobileMenu}>
                         Explore Experiences
                     </Link>
                     <Link to="/listExperience" className="mobile-menu-link" onClick={toggleMobileMenu}>

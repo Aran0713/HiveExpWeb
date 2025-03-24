@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "eventhive",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "autheventhive30354cef",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2024-07-10T23:54:30.692Z"
+}

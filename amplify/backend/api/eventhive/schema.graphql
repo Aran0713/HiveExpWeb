@@ -1,0 +1,431 @@
+type FollowRelationships
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  userId: String!
+  userName: String!
+  followerUserName: String
+  followerUserId: String
+  followeeUserName: String
+  followeeUserId: String
+  accepted: Boolean
+}
+type MyEvents
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  userId: String!
+  userName: String!
+  name: String
+  location: String
+  description: String
+  attendingEvents: [AttendingEvents] @hasMany(fields: ["id"])
+  hostingEvents: [HostingEvents] @hasMany(fields: ["id"])
+  attendingDeals: [AttendingDeals] @hasMany(fields: ["id"])
+  hostingDeals: [HostingDeals] @hasMany(fields: ["id"])
+  email: String
+  website: String
+  ig: String
+  twitter: String
+  snapchat: String
+  tiktok: String
+  youtube: String
+  threads: String
+  facebook: String
+  number: String
+  bigProfilePicture: String
+  smallProfilePicture: String
+  verified: Boolean
+  expoToken: String
+}
+type AttendingEvents
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  myUserID: String!
+  userName: String!
+  eventUserID: String
+  eventID: String
+  eventName: String
+  eventUsername: String
+  eventDate: String
+  eventOrganization: String
+  eventPrivacy: String
+  eventCity: String
+  eventCountry: String
+  eventType: String
+  image: String
+  newImage: String
+  event: MyEvents @belongsTo(fields: ["id"])
+}
+type HostingEvents
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  myUserID: String!
+  userName: String!
+  eventUserID: String
+  eventID: String
+  eventName: String
+  eventUsername: String
+  eventDate: String
+  eventOrganization: String
+  eventPrivacy: String
+  eventCity: String
+  eventCountry: String
+  eventType: String
+  image: String
+  newImage: String
+  event: MyEvents @belongsTo(fields: ["id"])
+}
+type HostingDeals
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  myUserID: String!
+  userName: String!
+  dealUserID: String
+  dealID: String
+  dealName: String
+  dealUsername: String
+  dealDate: String
+  dealEndDate: String
+  recurrenceType: String
+  daysOfWeek: [String]
+  dayOfMonth: [Int]
+  dayOfYear: [String]
+  dealOrganization: String
+  dealPrivacy: String
+  dealPremium: String
+  dealCity: String
+  dealCountry: String
+  dealType: String
+  image: String
+  newImage: String
+  deal: MyEvents @belongsTo(fields: ["id"])
+}
+type AttendingDeals
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  myUserID: String!
+  userName: String!
+  dealUserID: String
+  dealID: String
+  dealName: String
+  dealUsername: String
+  dealDate: String
+  dealEndDate: String
+  recurrenceType: String
+  daysOfWeek: [String]
+  dayOfMonth: [Int]
+  dayOfYear: [String]
+  dealOrganization: String
+  dealPrivacy: String
+  dealPremium: String
+  dealCity: String
+  dealCountry: String
+  dealType: String
+  image: String
+  newImage: String
+  deal: MyEvents @belongsTo(fields: ["id"])
+}
+
+type SubscriptionModel
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+    ]
+  ) {
+  id: ID!
+  userName: String!
+  userId: String!
+  userEmail: String!
+  planName: String!
+  planPrice: Float!
+  planEvents: Int!
+  planAds: Int!
+  startDate: AWSDateTime!
+  endDate: AWSDateTime!
+}
+
+type Event
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  organization: String!
+  userName: String!
+  userId: String
+  eventName: String!
+  eventPrivacy: String
+  eventType: String
+  smallDescription: String
+  ageLimit: Int
+  ticketInfo: String
+  date: AWSDate!
+  startTime: String
+  endTime: String
+  country: String
+  city: String
+  province: String
+  postalCode: String
+  address: String
+  longitude: String
+  latitude: String
+  school: String
+  image1: String
+  image2: String
+  image3: String
+  verifiedEvent: Boolean
+  featuredEvent: Boolean
+  attendingUserIds: [String!]
+  location: [Location] @hasMany(fields: ["id"])
+  description: [Description] @hasMany(fields: ["id"])
+  contact: [Contact] @hasMany(fields: ["id"])
+  specialAccommodation: [SpecialAccommodation] @hasMany(fields: ["id"])
+}
+
+type Location
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  country: String
+  city: String
+  province: String
+  postalCode: String
+  address: String
+  longitude: String!
+  latitude: String!
+  userName: String!
+  eventID: ID!
+  event: Event @belongsTo(fields: ["id"])
+}
+
+type Description
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  aboutEvent: String
+  schedule: String
+  userName: String!
+  eventID: ID!
+  event: Event @belongsTo(fields: ["id"])
+}
+
+type Contact
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  phone: String
+  email: String
+  website: String
+  ig: String
+  twitter: String
+  snapchat: String
+  tiktok: String
+  youtube: String
+  userName: String!
+  eventID: ID!
+  event: Event @belongsTo(fields: ["id"])
+}
+
+type SpecialAccommodation
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  ) {
+  id: ID!
+  wheelchairAccessibility: String
+  signLanguageInterpretation: String
+  closedCaptioning: String
+  assistiveListeningSystems: String
+  brailleMaterials: String
+  flexibleCommunicationOptions: String
+  accessibleSeating: String
+  serviceAnimalAccommodation: String
+  sensoryAccommodations: String
+  userName: String!
+  eventID: ID!
+  event: Event @belongsTo(fields: ["id"])
+}
+
+type Deal
+  @model
+  @auth(
+    rules: [
+      {
+        allow: owner
+        ownerField: "userName"
+        operations: [create, delete, update, read]
+      }
+      { allow: private, operations: [create, delete, update, read] }
+      { allow: public, provider: apiKey, operations: [create, delete, update, read] }
+    ]
+  )
+{
+  id: ID!
+  organization: String!
+  userName: String!
+  userId: String
+  dealName: String!
+  premium: String
+  dealPrivacy: String
+  ageLimit: Int
+  dealType: String
+  school: String
+  startDate: AWSDate!
+  endDate: AWSDate
+  startTime: String
+  endTime: String
+  recurrenceType: String
+  daysOfWeek: [String]
+  dayOfMonth: [Int]
+  dayOfYear: [String]
+  city: String
+  country: String
+  province: String
+  address: String
+  postalCode: String
+  longitude: String
+  latitude: String
+  image1: String
+  image2: String
+  image3: String
+  verifiedDeal: Boolean
+  featuredDeal: Boolean
+  attendingUserIds: [String!]
+  smallDescription: String
+  aboutDeal: String
+  schedule: String
+  ticketInfo: String
+  phone: String
+  email: String
+  website: String
+  ig: String
+  twitter: String
+  snapchat: String
+  tiktok: String
+  youtube: String
+  wheelchairAccessibility: String
+  signLanguageInterpretation: String
+  closedCaptioning: String
+  assistiveListeningSystems: String
+  brailleMaterials: String
+  flexibleCommunicationOptions: String
+  accessibleSeating: String
+  serviceAnimalAccommodation: String
+  sensoryAccommodations: String
+}

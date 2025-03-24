@@ -1,0 +1,580 @@
+/* SearchPage.css */
+
+/* Container around everything */
+.search-page-container {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
+    padding: 1rem;
+}
+
+/* Top bar: Title + Reset */
+.search-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-top-bar h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.reset-button {
+    background: #ffdc73;
+    color: #333;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+}
+
+/* Search bar row */
+.search-bar-row {
+    display: flex;
+    align-items: center;
+    background: #1c1c1c;
+    border-radius: 8px;
+    padding: 0.3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 1rem 0;
+}
+
+.back-arrow-btn {
+    display: flex;
+    background: none;
+    border: none;
+    color: #ffdc73;
+    cursor: pointer;
+    margin-right: 0.3rem;
+}
+
+.search-input {
+    flex: 1;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    color: #ffdc73;
+    font-size: 1.2rem;
+    cursor: pointer;
+    /* align-items: center;
+    justify-content: center; */
+    display: flex;
+}
+
+.filter-btn-top {
+    font-weight: 600;
+}
+
+.icon-style {
+    font-size: 24px;
+    color: #ffdc73;
+    font-weight: 1000;
+}
+
+.icon-style2 {
+    /* font-size: 24px; */
+    color: #ffdc73;
+}
+
+/* Filter chips */
+.filter-chips {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-chips button {
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+}
+
+/* Toggle row: deals vs events */
+.toggle-row {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.toggle-option {
+    flex: 1;
+    background: #222;
+    color: #fff;
+    font-weight: 600;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.toggle-option.selected {
+    background: #ffdc73;
+    color: #000;
+}
+
+/* Quick picks row */
+.browse-container {
+    margin-bottom: 1rem;
+}
+
+.quick-box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.quick-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.quick-box:hover {
+    transform: scale(1.05);
+}
+
+/* Results area */
+.results-area {
+    margin-top: 1rem;
+}
+
+.user-card,
+.deal-card,
+.event-card {
+    background: #222;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+/* Modals */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #fff;
+    color: #000;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+
+
+/* --- EVENT/DEAL TYPE MODAL --- */
+.typeModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    height: 100%;
+    /* Center the modal content horizontally/vertically */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* The main box that contains everything */
+.typeModalContent {
+    background-color: #FFF9E9;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+    margin-top: 3%;
+}
+
+/* The title text at the top */
+.typeModalTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+/* The scrollable area that holds all category blocks */
+.typeScrollContainer {
+    max-height: 60vh;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+/* Each block for a category (e.g. "Nightlife & Social Gatherings") */
+.typeCategoryBlock {
+    margin-bottom: 20px;
+}
+
+/* The category header text */
+.typeCategoryHeader {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Container for the row of bubble options */
+.typeOptionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    /* space between bubbles */
+}
+
+/* Each bubble button */
+.typeOptionButton {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 10px 12px;
+    margin: 2px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* On hover, slightly pop */
+.typeOptionButton:hover {
+    transform: scale(1.03);
+}
+
+/* If the user has clicked an option to select it, highlight it */
+.typeOptionSelected {
+    background-color: #d0e1f9;
+}
+
+/* The "Close" button at the bottom */
+.typeCloseButton {
+    background-color: #f6bb42;
+    border-radius: 5px;
+    padding: 8px 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    /* center horizontally */
+    margin-top: 10px;
+}
+
+/* ----------------- */
+/* SCHOOL MODAL STYLES */
+/* ----------------- */
+
+/* The dark overlay behind the modal */
+.schoolModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+
+    /* Center the modal content horizontally */
+    display: flex;
+    align-items: flex-start;
+    /* so it appears from top, similar to your type modal */
+    justify-content: center;
+}
+
+/* The main container (pale background, rounded corners) */
+.schoolModalContent {
+    background-color: #FFF9E9;
+    /* same pale background as your type modal */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    margin-top: 3%;
+    /* small gap from the top of the screen */
+}
+
+/* Title at the top */
+.schoolModalTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+/* Wrapper around the search input so it’s centered */
+.schoolInputWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* The search input (white box) */
+.schoolSearchInput {
+    height: 40px;
+    border: 2px solid #eeeeee;
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: white;
+    font-size: 16px;
+    width: 80%;
+    outline: none;
+}
+
+/* Wrapper around the “Hide School Events” button */
+.schoolButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* The “Hide School Events” button */
+.schoolHideButton {
+    background-color: #ffdc73;
+    /* gold color */
+    border-radius: 5px;
+    padding: 8px 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Scrollable area that holds the categories (Universities, Colleges) */
+.schoolScrollContainer {
+    max-height: 60vh;
+    /* or adjust as needed */
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+/* Each category block (e.g. “Universities”, “Colleges”) */
+.schoolCategoryBlock {
+    margin-bottom: 20px;
+}
+
+/* Category header text */
+.schoolCategoryHeader {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+/* Container for the bubble buttons (the schools) */
+.schoolOptionContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Each bubble button for a school name */
+.schoolOptionButton {
+    background-color: #fff;
+    border-radius: 14px;
+    padding: 10px 12px;
+    margin: 2px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Slight “pop” on hover */
+.schoolOptionButton:hover {
+    transform: scale(1.03);
+}
+
+/* If the user’s current selected school is this option, highlight it */
+.schoolOptionSelected {
+    background-color: #d0e1f9;
+}
+
+/* The “Close” button at the bottom */
+.schoolCloseButton {
+    background-color: #f6bb42;
+    border-radius: 5px;
+    padding: 8px 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+    /* center horizontally */
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/* Main Filter */
+/* Overlay that dims the screen */
+.filterModalOverlay {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+/* The white box container */
+.filterModalContent {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
+    position: relative;
+    margin-top: 3%;
+}
+
+/* Title at the top: "Customize Experience" */
+.filterModalTitle {
+    margin-top: 3%;
+    margin-bottom: 7%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+/* Shared wrapper for each text input so it’s centered horizontally */
+.filterModalInputWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* The text inputs themselves */
+.filterModalInput {
+    height: 40px;
+    border: 2px solid #eeeeee;
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: white;
+    font-size: 16px;
+    width: 80%;
+    outline: none;
+    /* optional */
+}
+
+/* Shared wrapper for each "Open List..." or "Open Calendar" button so it’s centered */
+.filterModalButtonWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* The "Open List..." and "Open Calendar" buttons */
+.filterModalButton {
+    background-color: #ffdc73;
+    /* similar gold tone */
+    /* border-radius: 5px; */
+    padding: 8px 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* The row with "Close" and "Reset" at the bottom */
+.filterModalCloseResetRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 8%;
+    margin-bottom: 6%;
+}
+
+/* The "Close" and "Reset" buttons share the same styling */
+.filterModalButtonSmall {
+    background-color: #f6bb42;
+    border-radius: 5px;
+    padding: 8px 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+
+/* Responsive: bigger screens */
+@media (min-width: 768px) {
+    .search-page-container {
+        padding: 2rem 10vw;
+    }
+
+    .quick-box-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bottom-nav {
+        display: none;
+        /* maybe hide bottom nav on desktop? */
+    }
+
+    .filterModalContent {
+
+        margin-top: 5%;
+    }
+}
