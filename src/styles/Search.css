@@ -207,8 +207,6 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9999;
-    height: 100%;
-    /* Center the modal content horizontally/vertically */
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -391,8 +389,7 @@
 
 /* Scrollable area that holds the categories (Universities, Colleges) */
 .schoolScrollContainer {
-    max-height: 60vh;
-    /* or adjust as needed */
+    max-height: 50vh;
     overflow-y: auto;
     margin-bottom: 20px;
 }
@@ -556,6 +553,71 @@
     color: white;
 }
 
+.calendarModalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: flex-start;
+    /* slide in from top like your other modals */
+    justify-content: center;
+}
+
+.calendarModalContent {
+    background-color: #FFF9E9;
+    /* same pale background as school modal */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    width: 90%;
+    margin-top: 3%;
+    /* small gap from top */
+    position: relative;
+}
+
+.calendarModalTitle {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.calendarInputWrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.calendarDateInput {
+    height: 40px;
+    width: 80%;
+    border: 2px solid #eeeeee;
+    border-radius: 15px;
+    padding: 0 15px;
+    background-color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.calendarCloseButton {
+    background-color: #f6bb42;
+    /* same gold tone as your close buttons */
+    border-radius: 5px;
+    padding: 8px 22px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+}
 
 
 /* Responsive: bigger screens */

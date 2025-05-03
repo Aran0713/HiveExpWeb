@@ -794,16 +794,18 @@ function Search() {
     };
 
     const onEventProfilePress = (id) => {
-        if (!id) return;
-        if (eventCategory === "deals") {
-            navigate(`/dealProfile/${id}/Search/None`);
-        } else {
-            navigate(`/eventProfile/${id}/Search/None`);
-        }
+        // if (!id) return;
+        // if (eventCategory === "deals") {
+        //     navigate(`/dealProfile/${id}/Search/None`);
+        // } else {
+        //     navigate(`/eventProfile/${id}/Search/None`);
+        // }
+        window.open('https://tr.ee/Pq1rXt6VOQ', '_blank', 'noopener,noreferrer');
     };
     const onProfileUsernamePress = (username, userId) => {
-        if (!username || !userId) return;
-        navigate(`/profile/${username}/${userId}`);
+        // if (!username || !userId) return;
+        // navigate(`/profile/${username}/${userId}`);
+        window.open('https://tr.ee/Pq1rXt6VOQ', '_blank', 'noopener,noreferrer');
     };
 
     // Quick picks
@@ -942,13 +944,22 @@ function Search() {
 
                 <div className="filter-chips">
                     <button className="filter-btn-top" onClick={handleFilterButton}>{cityName || "City"}</button>
-                    <button className="filter-btn-top" onClick={() => setSchoolModalVisible(true)}>{school || "School"}</button>
-                    <button className="filter-btn-top" onClick={() => setEventTypeModalVisible(true)}>
+                    <button className="filter-btn-top" onClick={() => {
+                        setSchoolModalVisible(true);
+                        setIsFocused(true);
+                    }}>{school || "School"}</button>
+                    <button className="filter-btn-top" onClick={() => {
+                        setEventTypeModalVisible(true);
+                        setIsFocused(true);
+                    }}>
                         {eventCategory === "deals"
                             ? dealTypes.length ? dealTypes.join(", ") : "Deal Type"
                             : eventTypes.length ? eventTypes.join(", ") : "Event Type"}
                     </button>
-                    <button className="filter-btn-top" onClick={() => setCalendarComponent(true)}>{date || "Date"}</button>
+                    <button className="filter-btn-top" onClick={() => {
+                        setCalendarComponent(true);
+                        setIsFocused(true);
+                    }}>{date || "Date"}</button>
                 </div>
 
                 <div className="toggle-row">
@@ -1335,7 +1346,7 @@ function Search() {
                                 }
                                 onClick={() => {
                                     setEventTypeModalVisible(true);
-                                    setModalVisible(false);
+                                    // setModalVisible(false);
                                 }}
                                 className="filterModalInput"
                             />
@@ -1345,7 +1356,7 @@ function Search() {
                             <button
                                 onClick={() => {
                                     setEventTypeModalVisible(true);
-                                    setModalVisible(false);
+                                    // setModalVisible(false);
                                 }}
                                 className="filterModalButton"
                             >
@@ -1364,7 +1375,7 @@ function Search() {
                                 value={school}
                                 onClick={() => {
                                     setSchoolModalVisible(true);
-                                    setModalVisible(false);
+                                    // setModalVisible(false);
                                 }}
                                 className="filterModalInput"
                             />
@@ -1374,7 +1385,7 @@ function Search() {
                             <button
                                 onClick={() => {
                                     setSchoolModalVisible(true);
-                                    setModalVisible(false);
+                                    // setModalVisible(false);
                                 }}
                                 className="filterModalButton"
                             >
@@ -1579,7 +1590,7 @@ function Search() {
                             className="schoolCloseButton"
                             onClick={() => {
                                 setSchoolModalVisible(false);
-                                setModalVisible(true);
+                                // setModalVisible(true);
                             }}
                         >
                             Close
@@ -1591,21 +1602,36 @@ function Search() {
 
             {/* CALENDAR MODAL */}
             {calendarComponent && (
-                <div className="modal-overlay" onClick={() => setCalendarComponent(false)}>
-                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-                        <h3>Select a Date</h3>
-                        <input
-                            type="date"
-                            onChange={(e) => {
-                                if (e.target.value) {
-                                    setDate(e.target.value);
-                                }
-                            }}
-                        />
-                        <button onClick={() => setCalendarComponent(false)}>Close</button>
+                <div
+                    className="calendarModalOverlay"
+                    onClick={() => setCalendarComponent(false)}
+                >
+                    <div
+                        className="calendarModalContent"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        <h3 className="calendarModalTitle">Select a Date</h3>
+
+                        <div className="calendarInputWrapper">
+                            <input
+                                type="date"
+                                className="calendarDateInput"
+                                onChange={e => {
+                                    if (e.target.value) setDate(e.target.value)
+                                }}
+                            />
+                        </div>
+
+                        <button
+                            className="calendarCloseButton"
+                            onClick={() => setCalendarComponent(false)}
+                        >
+                            Close
+                        </button>
                     </div>
                 </div>
             )}
+
 
 
         </div>
